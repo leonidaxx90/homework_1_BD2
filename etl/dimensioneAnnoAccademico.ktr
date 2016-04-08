@@ -246,12 +246,12 @@
            </partitioning>
       <valuename>Anno</valuename>
       <use_database>N</use_database>
-      <connection/>
+      <connection>DWH2</connection>
       <schema/>
       <seqname>SEQ_</seqname>
       <use_counter>Y</use_counter>
       <counter_name>var</counter_name>
-      <start_at>2010</start_at>
+      <start_at>1970</start_at>
       <increment_by>1</increment_by>
       <max_value>2016</max_value>
      <cluster_schema/>
@@ -275,7 +275,7 @@
            </partitioning>
     <fields>
     </fields>
-    <limit>10</limit>
+    <limit>47</limit>
     <never_ending>N</never_ending>
     <interval_in_ms>5000</interval_in_ms>
     <row_time_field>now</row_time_field>

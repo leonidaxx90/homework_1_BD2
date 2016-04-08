@@ -1,0 +1,210 @@
+<Schema name="Esami">
+  <Dimension name="Anno accademico">
+    <Hierarchy name="K anno accademico" hasAll="true" primaryKey="k_anno_accademico">
+      <Table name="anno_accademico" schema="ava"/>
+      <Level name="K anno accademico" uniqueMembers="false" column="k_anno_accademico" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Anno completo" hasAll="true" primaryKey="k_anno_accademico">
+      <Table name="anno_accademico" schema="ava"/>
+      <Level name="Anno completo" uniqueMembers="false" column="nome_anno_completo" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome anno prec" hasAll="true" primaryKey="k_anno_accademico">
+      <Table name="anno_accademico" schema="ava"/>
+      <Level name="Nome anno prec" uniqueMembers="false" column="nome_anno_prec" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome anno x" hasAll="true" primaryKey="k_anno_accademico">
+      <Table name="anno_accademico" schema="ava"/>
+      <Level name="Nome anno x" uniqueMembers="false" column="nome_anno_x" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Corso">
+    <Hierarchy name="Codice corso" hasAll="true" primaryKey="k_corso">
+      <Table name="corso" schema="ava"/>
+      <Level name="Codice corso" uniqueMembers="false" column="codice_corso" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="K corso" hasAll="true" primaryKey="k_corso">
+      <Table name="corso" schema="ava"/>
+      <Level name="K corso" uniqueMembers="false" column="k_corso" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy hasAll="true" primaryKey="k_corso">
+      <Table name="corso" schema="ava"/>
+      <Level name="Corso" uniqueMembers="false" column="nome_corso" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Numero crediti corso" hasAll="true" primaryKey="k_corso">
+      <Table name="corso" schema="ava"/>
+      <Level name="Numero crediti corso" uniqueMembers="false" column="numero_crediti_corso" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Ssd" hasAll="true" primaryKey="k_corso">
+      <Table name="corso" schema="ava"/>
+      <Level name="Ssd" uniqueMembers="false" column="ssd" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Corso di studi">
+    <Hierarchy name="Codice ateneo" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Codice ateneo" uniqueMembers="false" column="codice_ateneo" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Codice corso di studi" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Codice corso di studi" uniqueMembers="false" column="codice_corso_di_studi" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Codice dipartimento" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Codice dipartimento" uniqueMembers="false" column="codice_dipartimento" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Data inizio validita" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Data inizio validita" uniqueMembers="false" column="data_inizio_validita" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Durata legale" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Durata legale" uniqueMembers="false" column="durata_legale" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Ha numero programmato" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Ha numero programmato" uniqueMembers="false" column="ha_numero_programmato" type="Boolean">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="K corso di studi" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="K corso di studi" uniqueMembers="false" column="k_corso_di_studi" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Corsi di studi" uniqueMembers="false" column="nome_cds" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome dipartimento" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Nome dipartimento" uniqueMembers="false" column="nome_dipartimento" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Numero programmato" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Numero programmato" uniqueMembers="false" column="numero_programmato" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo cds" hasAll="true" primaryKey="k_corso_di_studi">
+      <Table name="corso_di_studi" schema="ava"/>
+      <Level name="Tipo cds" uniqueMembers="false" column="tipo_cds" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Data">
+    <Hierarchy hasAll="true" primaryKey="k_data">
+      <Table name="data" schema="ava"/>
+      <Level name="Anno" uniqueMembers="false" column="anno" type="Numeric">
+      </Level>
+      <Level name="Mese" uniqueMembers="false" column="mese" type="Numeric">
+      </Level>
+      <Level name="Giorno" uniqueMembers="false" column="giorno" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Studente">
+    <Hierarchy name="Anno diploma" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Anno diploma" uniqueMembers="false" column="anno_diploma" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Studente" uniqueMembers="false" column="cf" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Cittadinanza" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Cittadinanza" uniqueMembers="false" column="cittadinanza" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Comune residenza" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Comune residenza" uniqueMembers="false" column="comune_residenza" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Coorte" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Coorte" uniqueMembers="false" column="coorte" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Data nascita" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Data nascita" uniqueMembers="false" column="data_nascita" type="Date">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Istituto scuola superiore" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Istituto scuola superiore" uniqueMembers="false" column="istituto_scuola_superiore" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="K studente" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="K studente" uniqueMembers="false" column="k_studente" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nazione diploma" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Nazione diploma" uniqueMembers="false" column="nazione_diploma" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Provincia residenza" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Provincia residenza" uniqueMembers="false" column="provincia_residenza" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Regione residenza" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Regione residenza" uniqueMembers="false" column="regione_residenza" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Sesso" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Sesso" uniqueMembers="false" column="sesso" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Stato residenza" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Stato residenza" uniqueMembers="false" column="stato_residenza" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo scuola superiore" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Tipo scuola superiore" uniqueMembers="false" column="tipo_scuola_superiore" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Titolo diploma" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Titolo diploma" uniqueMembers="false" column="titolo_diploma" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Voto maturita" hasAll="true" primaryKey="k_studente">
+      <Table name="studente" schema="ava"/>
+      <Level name="Voto maturita" uniqueMembers="false" column="voto_maturita" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Esami">
+    <Table name="esami" schema="ava"/>
+    <DimensionUsage name="Anno accademico" source="Anno accademico" foreignKey="k_anno_accademico"/>
+    <DimensionUsage name="Corso" source="Corso" foreignKey="k_corso"/>
+    <DimensionUsage name="Corso di studi" source="Corso di studi" foreignKey="k_corso_di_studi"/>
+    <DimensionUsage name="Data" source="Data" foreignKey="k_data"/>
+    <DimensionUsage name="Studente" source="Studente" foreignKey="k_studente"/>
+    <Measure name="Voto" column="voto" aggregator="sum" formatString="&#x23;"/>
+  </Cube>
+</Schema>
