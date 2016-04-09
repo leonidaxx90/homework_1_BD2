@@ -190,6 +190,6 @@
     <DimensionUsage name="Data" source="Data" foreignKey="k_data"/>
     <DimensionUsage name="Studente" source="Studente" foreignKey="k_studente"/>
     <DimensionUsage name="Tipo immatricolazione" source="Tipo immatricolazione" foreignKey="k_tipo_immatricolazione"/>
-    <Measure name="Punteggio test" column="punteggio_test" aggregator="sum" formatString="&#x23;"/>
+    <Measure name="Punteggio test" column="punteggio_test" aggregator="avg" formatString="&#x23;"/>
   </Cube>
 </Schema>

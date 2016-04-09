@@ -205,6 +205,6 @@
     <DimensionUsage name="Corso di studi" source="Corso di studi" foreignKey="k_corso_di_studi"/>
     <DimensionUsage name="Data" source="Data" foreignKey="k_data"/>
     <DimensionUsage name="Studente" source="Studente" foreignKey="k_studente"/>
-    <Measure name="Voto" column="voto" aggregator="sum" formatString="&#x23;"/>
+    <Measure name="Voto" column="voto" aggregator="avg" formatString="&#x23;"/>
   </Cube>
 </Schema>
