@@ -15,9 +15,9 @@
       <Level name="Nome anno prec" uniqueMembers="false" column="nome_anno_prec" type="String">
       </Level>
     </Hierarchy>
-    <Hierarchy name="Nome anno x" hasAll="true" primaryKey="k_anno_accademico">
+    <Hierarchy hasAll="true" primaryKey="k_anno_accademico">
       <Table name="anno_accademico" schema="ava"/>
-      <Level name="Nome anno x" uniqueMembers="false" column="nome_anno_x" type="String">
+      <Level name="Anno accademico" uniqueMembers="false" column="nome_anno_x" type="String">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -86,7 +86,7 @@
     </Hierarchy>
     <Hierarchy hasAll="true" primaryKey="k_corso_di_studi">
       <Table name="corso_di_studi" schema="ava"/>
-      <Level name="Corsi di studi" uniqueMembers="false" column="nome_cds" type="String">
+      <Level name="Corso di studi" uniqueMembers="false" column="nome_cds" type="String">
       </Level>
     </Hierarchy>
     <Hierarchy name="Nome dipartimento" hasAll="true" primaryKey="k_corso_di_studi">

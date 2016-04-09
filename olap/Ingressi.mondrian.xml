@@ -2,7 +2,7 @@
   <Dimension name="Anno accademico">
     <Hierarchy name=" Anno accademico" hasAll="true" primaryKey="k_anno_accademico">
       <Table name="anno_accademico" schema="ava"/>
-      <Level name="anno accademico" uniqueMembers="false" column="nome_anno_x" type="String">
+      <Level name="Anno accademico" uniqueMembers="false" column="nome_anno_x" type="String">
       </Level>
     </Hierarchy>
     <Hierarchy name="Nome anno completo" hasAll="true" primaryKey="k_anno_accademico">
@@ -13,11 +13,6 @@
     <Hierarchy name="Nome anno prec" hasAll="true" primaryKey="k_anno_accademico">
       <Table name="anno_accademico" schema="ava"/>
       <Level name="Nome anno prec" uniqueMembers="false" column="nome_anno_prec" type="String">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Nome anno x" hasAll="true" primaryKey="k_anno_accademico">
-      <Table name="anno_accademico" schema="ava"/>
-      <Level name="Nome anno x" uniqueMembers="false" column="nome_anno_x" type="String">
       </Level>
     </Hierarchy>
   </Dimension>
